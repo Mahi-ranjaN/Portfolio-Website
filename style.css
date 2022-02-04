@@ -1,0 +1,554 @@
+/* --------APPLYING THE BG IMAGE---------- */
+
+body {
+  background-image: url("background3.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+/*****************NAVBAR*********************/
+
+#navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0px;
+  height: 65px;
+}
+
+#navbar::before {
+  content: "";
+  background-color: rgba(63, 51, 81, 0.7);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo {
+  margin: 10px 0px 5px 25px;
+  padding: 0px 0px 0px 2px;
+}
+
+#logo img {
+  height: 60px;
+  margin: 1px 1px;
+}
+
+/* Navigation Bar: List Styling */
+
+#navbar ul {
+  display: flex;
+  padding-left: 10px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#navbar ul li {
+  list-style: none;
+  font-size: 1rem;
+}
+
+#navbar ul li a {
+  color: #f2f2f2;
+  display: block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+#navbar ul li a:hover {
+  color: black;
+  background-color: #09e7f2;
+}
+
+/* -----------FIRST NAME BOX------------- */
+
+.name-box {
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  width: 370px;
+  padding: 5px 5px 20px 5px;
+  background-color: rgba(63, 51, 81, 0.7);
+  /* box-shadow: -10px -20px 50px greenyellow; */
+  margin-top: 150px;
+  margin-left: 150px;
+  border-style: outset;
+  border-right: 4px solid #f2f2f2;
+  border-left: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+/* -----------------SECOND INTRO BOX------------- */
+.intro-box {
+  display: inline-block;
+  text-align: center;
+  height: 25px;
+  width: 270px;
+  padding: 5px 5px 20px 5px;
+  background-color: rgba(63, 51, 81, 0.7);
+  /* box-shadow: -10px -20px 50px greenyellow; */
+  margin-top: 1px;
+  margin-left: 530px;
+  border-style: outset;
+  border-left: 4px solid #f2f2f2;
+  border-right: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+/* -----------NAME BOX TEXT------------- */
+
+.h1 {
+  margin: 0;
+  color: #f2f2f2;
+  height: 25;
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+}
+
+/* -----------INTRO BOX TEXT------------- */
+
+.h2 {
+  margin: 0;
+  color: #f2f2f2;
+  height: 25;
+  font-family: "Nanum Gothic Coding", monospace;
+}
+
+/* <!-- -------------------ABOUT ME------------------------- 
+-------------------BOX-------------------------  --> */
+.about-me-section {
+  height: 290px;
+  width: 670px;
+  background-color: rgba(63, 51, 81, 0.7);
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 100px;
+  border-left: 4px solid #f2f2f2;
+  border-right: 4px solid #f2f2f2;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+/* ---------------ABOUT ME HEADING----------------- */
+
+.h4 {
+  color: ivory;
+  padding-top: 30px;
+  font-size: 30px;
+  position: relative;
+  text-align: center;
+}
+
+/* ---------------ABOUT ME PARA----------------- */
+
+.about-me-para {
+  height: 145px;
+  width: 300px;
+  margin: auto;
+  color: ivory;
+  border-style: outset;
+  border-right: 0;
+  border-left: 3px solid #f2f2f2;
+  border-top: 0;
+  border-bottom: 0;
+  padding-left: 10px;
+  position: relative;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* ---------------RESUME .button CONTAINER----------------- */
+
+.r-button {
+  height: 40px;
+  width: 230px;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+  margin-left: 380px;
+  margin-top: -100px;
+  position: absolute;
+  outline: none;
+  background: #f2f2f2;
+  color: #111;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.5s;
+  border-radius: 20px;
+}
+
+.r-button .button-text {
+  top: 9px;
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.r-button .button-text:hover {
+  color: #f2f2f2;
+}
+
+.r-button:first-child:hover {
+  background: linear-gradient(90deg, #03a9f4, #237499);
+  background-size: 400%;
+}
+.r-button:last-child:hover {
+  background: linear-gradient(90deg, #03a9f4, #237499);
+  background-size: 400%;
+}
+.r-button:first-child:before,
+.r-button:last-child:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.r-button:first-child:hover:before,
+.r-button:last-child:hover:before {
+  opacity: 1;
+  z-index: -1;
+}
+.r-button:hover {
+  z-index: 1;
+  animation: glow 4s linear infinite;
+}
+@keyframes glow {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+/* <!-- -------------------SKILLS------------------------- 
+-------------------BOX-------------------------  --> */
+
+.skills-section {
+  height: 380px;
+  width: 670px;
+  background-color: rgba(63, 51, 81, 0.7);
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 130px;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+/* ---------------SKILLS HEADING----------------- */
+
+.h4 {
+  color: ivory;
+  padding-top: 30px;
+  font-size: 30px;
+  position: relative;
+  text-align: center;
+}
+
+/* ---------------TECH ICONS POSITIONING----------------- */
+
+.container {
+  /* width: 100%;
+    margin: 0 auto; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  justify-items: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ---------------CONTAINER CARD----------------- */
+
+.container .card {
+  position: relative;
+  max-width: 150px;
+  height: 60px;
+  background-color: none;
+  margin: 30px 8px 8px 30px;
+  padding: 10px 2px 2px 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 200px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+/* ---------------CONTAINER CARD EFFCTS ON HOVER----------------- */
+
+.container .card:hover {
+  height: 8px;
+}
+
+/* --------------- TECH IMAGES----------------- */
+
+.container .card .img {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  top: -60px;
+  z-index: 1;
+  /* box-shadow: 0 5px 200px rgba(0,0,0,0.2); */
+}
+
+/* --------------- TECH IMAGES----------------- */
+
+.container .card .img img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+/* ---------------TEXT----------------- */
+
+.container .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: ivory;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  font-size: 14px;
+}
+
+/* ---------------TEXT EFFECT ON HOVER----------------- */
+
+.container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -80px;
+  transition-delay: 0.1s;
+}
+
+/*----------------ADJUSTING SOME STUFFS IN THE TECH LIST---------------*/
+
+.html-img {
+  margin-left: -23px;
+}
+
+.html-content {
+  margin-left: -41px;
+}
+
+.cpp-content {
+  margin-left: -30px;
+}
+
+.c-img {
+  margin-left: 15px;
+}
+
+.c-content {
+  margin-right: 20px;
+}
+
+/* <!-- ------------------PROJECTS------------------------- 
+-------------------BOX-------------------------  --> */
+
+.projects-section {
+  height: 900px;
+  width: 670px;
+  background-color: rgba(63, 51, 81, 0.7);
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 130px;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+.projects-list {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  grid-gap: 1.5rem;
+}
+
+.project-card {
+  width: 30rem;
+  padding: 1rem 0;
+}
+
+.project-img {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project-img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: transform 200ms ease-in;
+}
+
+.project-img > img:hover {
+  transform: scale(1.2);
+}
+
+.project-info {
+  text-align: center;
+}
+
+.project-info h3 {
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  color: ivory;
+  margin-bottom: 0px;
+}
+
+.project-card .links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.1rem;
+}
+
+.project-card a {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--orange);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 200ms ease-in;
+}
+
+.project-card a:hover {
+  transform: scale(1.1);
+}
+
+.project-card a > img {
+  width: 3rem;
+  height: 3rem;
+}
+
+<!-- /*******************FOOTER AND SOCIAL MEDIA******************************/ -->
+
+
+
+.footer-content {
+  margin-top: 60px;
+  background: rgba(63, 51, 81, 0.7);
+  color: black;
+  height: auto;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  padding: 30px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+.p2{
+    color: whitesmoke;
+    font-size: 1rem;
+    
+}
+
+.lastline{
+    
+    padding-top: 60px;
+}
+
+.wrapper .button {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin: 0 8px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover {
+  width: 200px;
+}
+.wrapper .button .icon {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 50px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon {
+  background: #0077B5;
+}
+.wrapper .button:nth-child(2):hover .icon {
+  background: #000000;
+  
+}
+.wrapper .button:nth-child(3):hover .icon {
+    background: #1da1f2;
+}
+.wrapper .button:nth-child(4):hover .icon {
+  background: #EA4335;
+}
+
+.wrapper .button .icon i {
+  font-size: 25px;
+  line-height: 50px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i {
+  color: #fff;
+}
+.wrapper .button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 50px;
+  margin-left: 10px;
+  margin-right: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span {
+  color: #0077B5;
+}
+.wrapper .button:nth-child(2) span {
+  color: #000000;
+}
+.wrapper .button:nth-child(3) span {
+  color: #1da1f2;
+}
+.wrapper .button:nth-child(4) span {
+  color: #EA4335;
+}
+
